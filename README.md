@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# RH Queens - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Badge](https://img.shields.io/badge/react-18.2.0-blue)
+![Badge](https://img.shields.io/badge/api-integrada-success)
 
-Currently, two official plugins are available:
+Este é o repositório **frontend** do projeto **RH Queens**, uma plataforma para gestão de talentos e profissionais com foco em diversidade, inclusão e equidade. Desenvolvido com **React** e integrado ao backend Java/Spring Boot disponível neste repositório: [RH Queens - Backend](https://github.com/Isabela-prog/rh-queens).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
+- [React Router DOM](https://reactrouter.com/)
+- [Tailwind CSS](https://tailwindcss.com/) (se aplicável)
+- Integração com API RESTful (Spring Boot)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ⚙️ Funcionalidades
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Autenticação de usuários (login e cadastro)
+- Visualização de funcionários
+- Filtro por categoria (tema)
+- Integração completa com o backend via API
+
+## 📦 Como rodar o projeto localmente
+
+### Pré-requisitos
+
+- Node.js (versão 18 ou superior)
+- Gerenciador de pacotes (npm ou yarn)
+- Backend em execução ([veja aqui como rodar](https://github.com/Isabela-prog/rh-queens))
+
+### Passos
+
+```bash
+# Clone o repositório
+git clone https://github.com/Isabela-prog/projeto_integrador_rh_queens_-front.git
+
+# Acesse a pasta do projeto
+cd projeto_integrador_rh_queens_-front
+
+# Instale as dependências
+yarn install
+
+# Inicie o projeto
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A aplicação será iniciada em `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+⚠️ **Importante:** Certifique-se de que o backend esteja rodando em `http://localhost:8080` ou ajuste a baseURL em `services/Service.ts`.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🧩 Estrutura do Projeto
+
+```bash
+📁 src
+ ┣ 📁 assets        # Imagens e ícones
+ ┣ 📁 components    # Componentes reutilizáveis (Navbar, Footer, etc.)
+ ┣ 📁 pages         # Páginas principais (Home, Login, Cadastro, etc.)
+ ┣ 📁 services      # Integração com API (funções com Axios)
+ ┣ 📁 types         # Tipagens TypeScript
+ ┣ App.tsx
+ ┗ main.tsx
 ```
+
+## 👩‍💻 Desenvolvedora
+
+- [@Isabela-prog](https://github.com/Isabela-prog)
+- [@EvelynSantos6](https://github.com/EvelynSantos6)
+- [@maytearaujo](https://github.com/maytearaujo)
+- [@ThainaraCruz](https://github.com/ThainaraCruz)
+- [@Abilafora](https://github.com/Abilafora)
+- [@hellengleice](https://github.com/hellengleice)
